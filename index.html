@@ -1,3 +1,31 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Grupo 2</title>
+</head>
+<body>
+
+    <div id="miCaja">Este es el contenido de la caja</div>
     
+    <!-- Botón que activa el evento -->
+    <button id="miBoton">Obtener contenido</button>
+
+    <!-- Bloque de JavaScript dentro del mismo archivo -->
+    <script>
+        // Seleccionamos los elementos del DOM
+        const miCaja = document.getElementById('miCaja');
+        const miBoton = document.getElementById('miBoton');
+
+        // Añadimos el event listener al botón para detectar el clic
+        miBoton.addEventListener('click', function() {
+            // Obtenemos el contenido de la caja
+            const contenido = miCaja.textContent; // También puedes usar .innerHTML si hay HTML dentro de la caja
+            console.log(contenido); // Esto muestra el contenido en la consola
+            alert(contenido); // Esto muestra el contenido en una alerta
+        });
+    </script>
+
+</body>
 </html>
