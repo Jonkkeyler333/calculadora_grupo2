@@ -57,10 +57,10 @@
     </div>
 
     <script>
-        //Código base (aún falta)
         const miCaja = document.getElementById('miCaja');
         const miBoton = document.getElementById('miBoton');
         const op1=document.getElementById('op1');
+        let del=document.getElementById('borrar');
         let b1=document.getElementById('1');
         let b2=document.getElementById('2');
         let b3=document.getElementById('3');
@@ -76,6 +76,14 @@
             boton.addEventListener('click', function () {
                 op1.value += boton.id;
             });
+        });
+        del.addEventListener('click', function () {
+            let value = op1.value;
+            if(value.length==0){
+                alert('No hay nada que borrar');
+            }
+            op1.value=op1.value.substring(0,op1.value.length-1);
+
         });
     </script>
 
