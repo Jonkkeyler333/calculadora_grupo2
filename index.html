@@ -57,8 +57,7 @@
     </div>
 
     <script>
-        const miCaja = document.getElementById('miCaja');
-        const miBoton = document.getElementById('miBoton');
+        const clear=document.getElementById('ac');
         const op1=document.getElementById('op1');
         let del=document.getElementById('borrar');
         let b1=document.getElementById('1');
@@ -85,6 +84,10 @@
             op1.value=op1.value.substring(0,op1.value.length-1);
 
         });
+        clear.addEventListener('click',()=>{
+            op1.value='';
+        });
+        
     </script>
 
 </body>
