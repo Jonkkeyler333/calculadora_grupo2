@@ -8,23 +8,36 @@
     <link rel="icon" type="image/x-icon" href="6472942.png">
 
     <style>
+        /* *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size:30px;
+        } */
         .ContainerGeneral {
             border-radius: 20px;
             border: 3px solid #4D4F52;
             padding: 25px;
-            width: 400px;
+            width: 500px;
             height: 600px;
             margin: auto;
         }
-
         .OpButton {            
             width: 75px;
             height: 90px;
             border-radius: 50px;
         }
+        /* #op1,#op2,#result{
+            width: 100%;
+            height: 50px;
+            border-radius: 10px;
+            border: 2px solid #4D4F52;
+            font-size: 20px;
+        } */
+        .resaltado {
+        border: 2px solid #FF6347; /* Un borde de color tomate para destacar */
+        box-shadow: 0px 0px 10px #FF6347; /* Agregar sombra alrededor del input */
+        }
     </style>
 </head>
-
 <body>
     <div class="ContainerGeneral">
         <div id="ContainerHead">
@@ -106,6 +119,7 @@
         const float=document.getElementById('punto');
         const result_input=document.getElementById('result');
         let op="op1"; //op1 u op2
+        document.getElementById(op).classList.add('resaltado');
         let del=document.getElementById('borrar');
         let b1=document.getElementById('1');
         let b2=document.getElementById('2');
@@ -161,9 +175,13 @@
 
         move.addEventListener('click',()=>{
             if(op=='op1'){
+                document.getElementById(op).classList.remove('resaltado');
                 op='op2';
+                document.getElementById(op).classList.add('resaltado');
             }else{
+                document.getElementById(op).classList.remove('resaltado');
                 op='op1';
+                document.getElementById(op).classList.add('resaltado');
             }
         });
         
@@ -218,11 +236,15 @@
                 else if(operation=='division'){
                     if (op2.value==0){
                         alert('Cannot divide by 0');
+                        result='syntax error';
                     }
-                    result=parseFloat(op1.value)/parseFloat(op2.value);
+                    else{
+                        result=parseFloat(op1.value)/parseFloat(op2.value)
+                    }
                 }
                 else{
                     alert('Please select an operation');
+                    result='syntax error';
                 }
                 result_input.value=result;
             }
