@@ -169,7 +169,10 @@
             if(value.length==0){
                 alert('Nothing for delete');
             }
-            inputSeleccionado.value=inputSeleccionado.value.substring(0,op1.value.length-1);
+            if(value.length == 1){
+                inputSeleccionado.value = ''
+            }
+            inputSeleccionado.value = inputSeleccionado.value.substring(0,inputSeleccionado.value.length-1);
         });
 
         clear.addEventListener('click',()=>{
