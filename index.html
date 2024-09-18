@@ -20,9 +20,9 @@
 
         <div id="ContainerOperations"></div>
             
-            <input id= "op1",type="text"></input>
+            <input id= "op1",type="text" disabled></input>
             <label id="labeldinamico"> - </label>
-            <input id= "op2",type="text"></input>
+            <input id= "op2",type="text" disabled></input>
             <label id="label2"> = </label>
             <input id= "result",type="text" disabled></input>
         </div>
@@ -56,6 +56,7 @@
         //Código base (aún falta)
         const miCaja = document.getElementById('miCaja');
         const miBoton = document.getElementById('miBoton');
+        const op1=document.getElementById('op1');
         let b1=document.getElementById('1');
         let b2=document.getElementById('2');
         let b3=document.getElementById('3');
@@ -65,15 +66,12 @@
         let b7=document.getElementById('7');
         let b8=document.getElementById('8');
         let b9=document.getElementById('9');
-        botones=[b1,b2,b3,b4,b5,b6,b7,b8,b9];
+        let b0=document.getElementById('0');
+        botones=[b0,b1,b2,b3,b4,b5,b6,b7,b8,b9];
         botones.forEach(boton => {
             boton.addEventListener('click', function () {
-                alert(`Has pulsado el botón ${boton.id}`);
+                op1.value += boton.id;
             });
-        });
-        miBoton.addEventListener('click', function () {
-            const contenido = miCaja.textContent;
-
         });
     </script>
 
