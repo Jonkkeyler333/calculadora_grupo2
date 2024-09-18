@@ -38,14 +38,14 @@
             <button id="4">4</button>
             <button id="5">5</button>
             <button id="6">6</button>
-            <button id="enter">Enter</button>
+            <button id="enter">=</button>
         </div>
         <div id="ContainerButtons3"></div>
             <button id="7">7</button>
             <button id="8">8</button>
             <button id="9">9</button>
-            <button id="mas">+</button>
-            <button id="menos">-</button>
+            <button id="suma">+</button>
+            <button id="resta">-</button>
         </div>
         <div id="ContainerButtons4"></div>
             <button id="punto">.</button>
@@ -59,9 +59,12 @@
     <script>
         const clear=document.getElementById('ac');
         const op1=document.getElementById('op1');
+        const labeldinamico=document.getElementById('labeldinamico');
         const op2=document.getElementById('op2');
         const move=document.getElementById('moverCaja');
-        let op="op1";
+        const float=document.getElementById('punto');
+        const result_input=document.getElementById('result');
+        let op="op1"; //op1 u op2
         let del=document.getElementById('borrar');
         let b1=document.getElementById('1');
         let b2=document.getElementById('2');
@@ -73,28 +76,48 @@
         let b8=document.getElementById('8');
         let b9=document.getElementById('9');
         let b0=document.getElementById('0');
+        let result=0;
         botones=[b0,b1,b2,b3,b4,b5,b6,b7,b8,b9];
+        // functions 
         function add_number(number){
             let inputSeleccionado=document.getElementById(op);
             inputSeleccionado.value+=number;
         }
+
         botones.forEach(boton => {
             boton.addEventListener('click',function(){
                 add_number(boton.innerText);
-                alert(boton.innerText)
+                // alert(boton.innerText)
             }
         )});
-        del.addEventListener('click', function () {
-            let value = op1.value;
-            if(value.length==0){
-                alert('No hay nada que borrar');
-            }
-            op1.value=op1.value.substring(0,op1.value.length-1);
 
+        float.addEventListener('click',function(){
+            let inputSeleccionado=document.getElementById(op);
+            // indexOf return -1 if the character is not found
+            if(inputSeleccionado.value.indexOf('.')==-1){
+                inputSeleccionado.value+='.';
+            }
+            else{
+               alert("Can't add more than one dot");
+            }
         });
+
+        del.addEventListener('click', function () {
+            let inputSeleccionado=document.getElementById(op);
+            let value = inputSeleccionado.value;
+            if(value.length==0){
+                alert('Nothing for delete');
+            }
+            inputSeleccionado.value=inputSeleccionado.value.substring(0,op1.value.length-1);
+        });
+
         clear.addEventListener('click',()=>{
             op1.value='';
+            op2.value='';
+            result_input.value='';
+            alert('All clear')
         });
+
         move.addEventListener('click',()=>{
             if(op=='op1'){
                 op='op2';
@@ -102,7 +125,67 @@
                 op='op1';
             }
         });
+        
+        //operations
+        function checkInputs(){
+            if(op1.value=='' || op2.value==''){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+
+        let suma=document.getElementById('suma');
+        let resta=document.getElementById('resta');
+        let multiplicacion=document.getElementById('multiplicacion');
+        let division=document.getElementById('division');
+        let enter=document.getElementById('enter');
+        let operation='';
+
+        suma.addEventListener('click',()=>{
+            operation='add';
+            labeldinamico.innerText='+';
+        });
+
+        resta.addEventListener('click',()=>{
+            operation='subtra';
+            labeldinamico.innerText='-';
+        });
+
+        division.addEventListener('click',()=>{
+            operation='add';
+            labeldinamico.innerText='÷';
+        });
+
+        multiplicacion.addEventListener('click',()=>{
+            operation='product';
+            labeldinamico.innerText='×';
+        });
+
+        enter.addEventListener('click',()=>{
+            if(checkInputs()){
+                if (operation=='add'){
+                    result=parseFloat(op1.value)+parseFloat(op2.value);
+                }
+                else if(operation=='subtra'){
+                    result=parseFloat(op1.value)-parseFloat(op2.value);
+                }
+                else if(operation=='product'){
+                    result=parseFloat(op1.value)*parseFloat(op2.value);
+                }
+                else if(operation=='division'){
+                    if (op2.value==0){
+                        alert('Cannnot divide by 0');
+                    }
+                    result=parseFloat(op1.value)/parseFloat(op2.value);
+                }
+                result_input.value=result;
+            }
+            else{
+                alert('Please fill both inputs');
+            }
+        });
     </script>
 </body>
-
 </html>
