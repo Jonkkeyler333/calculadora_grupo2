@@ -219,8 +219,15 @@
         });
 
         resta.addEventListener('click',()=>{
-            operation='subtra';
-            labeldinamico.innerText='-';
+            let inputSeleccionado = document.getElementById(op);
+            let value = inputSeleccionado.value;
+            if(value.length == 0){
+                inputSeleccionado.value = '-'
+            }
+            else{
+                operation='subtra';
+                labeldinamico.innerText='-';
+            }
         });
 
         division.addEventListener('click',()=>{
