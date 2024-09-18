@@ -6,53 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Grupo 2</title>
     <link rel="icon" type="image/x-icon" href="6472942.png">
+
+    <style>
+        .ContainerGeneral {
+            border-radius: 20px;
+            border: 3px solid #4D4F52;
+            padding: 25px;
+            width: 400px;
+            height: 600px;
+            margin: auto;
+        }
+
+        .OpButton {            
+            width: 75px;
+            height: 90px;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="ContainerGeneral">
-        <div id="ContainerLabels">
-            
-            <label id="label1">--------Operación 1 --------------------</label>
-            <label id="label1">Operación 2-------------------</label>
-            <label id="label1">Resultado----------</label>
-
+    <div class="ContainerGeneral">
+        <div id="ContainerHead">
+            <label id="LabelH"  style="font-weight: bold; font-size: 20px; padding: 15%;">
+                CALCULADORA CHAMO 0.5
+            </label>
         </div>
 
-        <div id="ContainerOperations"></div>
+        <div id="ContainerBlank">
+            <label id="LabelBlank"  style="font-size: 20px; padding: 15%;"></label>
+        </div>
+
+        <div id="ContainerOperations">
             
-            <input id= "op1",type="text" disabled></input>
-            <label id="labeldinamico"> - </label>
-            <input id= "op2",type="text" disabled></input>
-            <label id="label2"> = </label>
-            <input id= "result",type="text" disabled></input>
+            <label id="label1">Operación 1</label>
+            <input id= "op1",type="text", size="50" disabled></input>
+            <label id="label2">Operación 2</label>
+            <input id= "op2",type="text", size="50" disabled></input>
+            <label id="labeldinamico" style="font-weight: bold; font-size: 20px; color: rgb(255, 64, 0);"> - </label>
+            <label id="label3">Resultado</label>
+            <input id= "result",type="text", size="50" disabled></input>
+            <label id="label4" style="font-weight: bold; font-size: 20px; color: #1F59AA;"> = </label>
+        </div>
+
+        <div id="ContainerBlank">
+            <label id="LabelBlank"  style="font-size: 20px; padding: 5%;"></label>
         </div>
 
         <div id="ContainerButtons1">
-            <button id="1">1</button>
-            <button id="2">2</button>
-            <button id="3">3</button>
-            <button id="ac">AC</button>
-            <button id="moverCaja"> &lt;---&gt; </button>
+            <button id="1" style="width: 75px; height: 90px; border-radius: 15px;">1</button>
+            <button id="2" style="width: 75px; height: 90px; border-radius: 15px;">2</button>
+            <button id="3" style="width: 75px; height: 90px; border-radius: 15px;">3</button>
+            <button id="ac" style="width: 75px; height: 90px; border-radius: 50px;">AC</button>
+            <button id="moverCaja" style="width: 75px; height: 90px; border-radius: 15px;"> &lt;---&gt; </button>
         </div>
+
+        <div id="ContainerBlank">
+            <label id="LabelBlank"  style="padding: 1px;"></label>
+        </div>
+
         <div id="ContainerButtons2">
-            <button id="4">4</button>
-            <button id="5">5</button>
-            <button id="6">6</button>
-            <button id="enter">=</button>
+            <button id="4" style="width: 75px; height: 90px; border-radius: 15px;">4</button>
+            <button id="5" style="width: 75px; height: 90px; border-radius: 15px;">5</button>
+            <button id="6" style="width: 75px; height: 90px; border-radius: 15px;">6</button>
+            <button id="enter" style="width: 150px; height: 90px; border-radius: 50px;">=</button>
         </div>
-        <div id="ContainerButtons3"></div>
-            <button id="7">7</button>
-            <button id="8">8</button>
-            <button id="9">9</button>
-            <button id="suma">+</button>
-            <button id="resta">-</button>
+
+        <div id="ContainerBlank">
+            <label id="LabelBlank"  style="padding: 1px;"></label>
         </div>
-        <div id="ContainerButtons4"></div>
-            <button id="punto">.</button>
-            <button id="0">0</button>
-            <button id="borrar">del</button>
-            <button id="division">/</button>
-            <button id="multiplicacion">*</button>
+
+        <div id="ContainerButtons3">
+            <button id="7" style="width: 75px; height: 90px; border-radius: 15px;">7</button>
+            <button id="8" style="width: 75px; height: 90px; border-radius: 15px;">8</button>
+            <button id="9" style="width: 75px; height: 90px; border-radius: 15px;">9</button>
+            <button id="suma" style="width: 75px; height: 90px; border-radius: 50px;">+</button>
+            <button id="resta" style="width: 75px; height: 90px; border-radius: 50px;">-</button>
+        </div>
+
+        <div id="ContainerBlank">
+            <label id="LabelBlank"  style="padding: 1px;"></label>
+        </div>
+
+        <div id="ContainerButtons4">
+            <button id="punto" style="width: 75px; height: 90px; border-radius: 50px;">.</button>
+            <button id="0" style="width: 75px; height: 90px; border-radius: 15px;">0</button>
+            <button id="borrar" style="width: 75px; height: 90px; border-radius: 50px;">del</button>
+            <button id="division" style="width: 75px; height: 90px; border-radius: 50px;">/</button>
+            <button id="multiplicacion" style="width: 75px; height: 90px; border-radius: 50px;">*</button>
         </div>
     </div>
 
