@@ -142,15 +142,14 @@
         botones.forEach(boton => {
             boton.addEventListener('click',function(){
                 add_number(boton.innerText);
-                // alert(boton.innerText)
             }
         )});
 
         float.addEventListener('click',function(){
             let inputSeleccionado=document.getElementById(op);
-            // indexOf return -1 if the character is not found
+            // indexOf return -1 if the character is not found 😁👍
             if(inputSeleccionado.value.length==0){
-                console.log(inputSeleccionado.value)
+                console.log(inputSeleccionado.value+'😏')
                 alert('Please add a number before the dot');
                 inputSeleccionado.value='0.';
             }
