@@ -170,7 +170,7 @@
                 alert('Nothing for delete');
             }
             if(value.length == 1){
-                inputSeleccionado.value = ''
+                inputSeleccionado.value = '';
             }
             inputSeleccionado.value = inputSeleccionado.value.substring(0,inputSeleccionado.value.length-1);
         });
@@ -179,6 +179,8 @@
             op1.value='';
             op2.value='';
             result_input.value='';
+            labeldinamico.innerText= '';
+            operation = '';
             alert('All clear')
         });
 
