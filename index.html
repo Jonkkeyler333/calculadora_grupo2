@@ -59,6 +59,9 @@
     <script>
         const clear=document.getElementById('ac');
         const op1=document.getElementById('op1');
+        const op2=document.getElementById('op2');
+        const move=document.getElementById('moverCaja');
+        let op="op1";
         let del=document.getElementById('borrar');
         let b1=document.getElementById('1');
         let b2=document.getElementById('2');
@@ -71,11 +74,16 @@
         let b9=document.getElementById('9');
         let b0=document.getElementById('0');
         botones=[b0,b1,b2,b3,b4,b5,b6,b7,b8,b9];
+        function add_number(number){
+            let inputSeleccionado=document.getElementById(op);
+            inputSeleccionado.value+=number;
+        }
         botones.forEach(boton => {
-            boton.addEventListener('click', function () {
-                op1.value += boton.id;
-            });
-        });
+            boton.addEventListener('click',function(){
+                add_number(boton.innerText);
+                alert(boton.innerText)
+            }
+        )});
         del.addEventListener('click', function () {
             let value = op1.value;
             if(value.length==0){
@@ -87,9 +95,14 @@
         clear.addEventListener('click',()=>{
             op1.value='';
         });
-        
+        move.addEventListener('click',()=>{
+            if(op=='op1'){
+                op='op2';
+            }else{
+                op='op1';
+            }
+        });
     </script>
-
 </body>
 
 </html>
