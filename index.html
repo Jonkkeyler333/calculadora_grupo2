@@ -1,30 +1,61 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Grupo 2</title>
     <link rel="icon" type="image/x-icon" href="6472942.png">
 </head>
+
 <body>
-<div id="ContainerGeneral">
-    <div id="ContainerLabels">
-    <div id="miCaja"></div>
-    
-    <button id="miBoton">Obteneo</button>
+    <div id="ContainerGeneral">
+        <div id="ContainerLabels">
+            
+            <label id="label1">a</label>
+
+        </div>
+
+        <div id="ContainerOperations"></div>
+            
+            <input id= "op1",type="text"></input>
+            <input id= "op2",type="text"></input>
+
+        </div>
+
+        <div id="ContainerButtons1">
+            <button id="1">1</button>
+            <button id="2">2</button>
+            <button id="3">3</button>
+        </div>
+        <div id="ContainerButtons2">
+            <button id="4">4</button>
+            <button id="5">5</button>
+            <button id="6">6</button>
+        </div>
+        <div id="ContainerButtons3"></div>
+            <button id="7">7</button>
+            <button id="8">8</button>
+            <button id="9">9</button>
+        </div>
+        <div id="ContainerButtons4"></div>
+            <button id="punto">.</button>
+            <button id="0">0</button>
+            <button id="borrar">del</button>
+        </div>
     </div>
-</div>
 
     <script>
         //Código base (aún falta)
         const miCaja = document.getElementById('miCaja');
         const miBoton = document.getElementById('miBoton');
 
-        miBoton.addEventListener('click', function() {
+        miBoton.addEventListener('click', function () {
             const contenido = miCaja.textContent;
-            
+
         });
     </script>
 
 </body>
+
 </html>
