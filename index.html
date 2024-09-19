@@ -17,13 +17,9 @@
             border: 3px solid #4D4F52;
             padding: 25px;
             width: 500px;
-            height: 600px;
+            height: 630px;
             margin: auto;
-        }
-        .OpButton {            
-            width: 75px;
-            height: 90px;
-            border-radius: 50px;
+            background-color:azure;
         }
         /* #op1,#op2,#result{
             width: 100%;
@@ -38,10 +34,10 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #cebb8d;">
     <div class="ContainerGeneral">
         <div id="ContainerHead">
-            <label id="LabelH"  style="font-weight: bold; font-size: 20px; padding: 15%;">
+            <label id="LabelH"  style="font-weight: bold; font-size: 30px; padding: 35%;">
                 Calculadora
             </label>
         </div>
@@ -52,13 +48,13 @@
 
         <div id="ContainerOperations">
             
-            <label id="label1">Operación 1</label>
-            <input id= "op1",type="text", size="50" disabled></input>
-            <label id="label2">Operación 2</label>
-            <input id= "op2",type="text", size="50" disabled></input>
+            <label id="label1" style="font-size: 20px;">Operación 1</label>
+            <input id= "op1" style="font-size: 20px;",type="text", size="30" disabled></input>
+            <label id="label2" style="font-size: 20px;">Operación 2</label>
+            <input id= "op2" style="font-size: 20px;",type="text", size="30" disabled></input>
             <label id="labeldinamico" style="font-weight: bold; font-size: 20px; color: rgb(255, 64, 0);"></label>
-            <label id="label3">Resultado</label>
-            <input id= "result",type="text", size="50" disabled></input>
+            <label id="label3" style="font-size: 20px;">Resultado</label>
+            <input id= "result"style="font-size: 20px;",type="text", size="32" disabled></input>
             <label id="label4" style="font-weight: bold; font-size: 20px; color: #1F59AA;"> = </label>
         </div>
 
@@ -67,11 +63,11 @@
         </div>
 
         <div id="ContainerButtons1">
-            <button id="1" style="width: 75px; height: 90px; border-radius: 15px;">1</button>
-            <button id="2" style="width: 75px; height: 90px; border-radius: 15px;">2</button>
-            <button id="3" style="width: 75px; height: 90px; border-radius: 15px;">3</button>
-            <button id="ac" style="width: 75px; height: 90px; border-radius: 50px;">AC</button>
-            <button id="moverCaja" style="width: 75px; height: 90px; border-radius: 15px;">↔</button>
+            <button id="1" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">1</button>
+            <button id="2" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">2</button>
+            <button id="3" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">3</button>
+            <button id="ac" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#919597;">AC</button>
+            <button id="moverCaja" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px; background-color:#919597;">↔</button>
         </div>
 
         <div id="ContainerBlank">
@@ -79,10 +75,10 @@
         </div>
 
         <div id="ContainerButtons2">
-            <button id="4" style="width: 75px; height: 90px; border-radius: 15px;">4</button>
-            <button id="5" style="width: 75px; height: 90px; border-radius: 15px;">5</button>
-            <button id="6" style="width: 75px; height: 90px; border-radius: 15px;">6</button>
-            <button id="enter" style="width: 150px; height: 90px; border-radius: 50px;">=</button>
+            <button id="4" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">4</button>
+            <button id="5" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">5</button>
+            <button id="6" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">6</button>
+            <button id="enter" style="font-size: 30px; width: 190px; height: 100px; border-radius: 50px; background-color:#47a9ff;">=</button>
         </div>
 
         <div id="ContainerBlank">
@@ -90,11 +86,11 @@
         </div>
 
         <div id="ContainerButtons3">
-            <button id="7" style="width: 75px; height: 90px; border-radius: 15px;">7</button>
-            <button id="8" style="width: 75px; height: 90px; border-radius: 15px;">8</button>
-            <button id="9" style="width: 75px; height: 90px; border-radius: 15px;">9</button>
-            <button id="suma" style="width: 75px; height: 90px; border-radius: 50px;">+</button>
-            <button id="resta" style="width: 75px; height: 90px; border-radius: 50px;">-</button>
+            <button id="7" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">7</button>
+            <button id="8" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">8</button>
+            <button id="9" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">9</button>
+            <button id="suma" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#ffac47;">+</button>
+            <button id="resta" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#ffac47;">-</button>
         </div>
 
         <div id="ContainerBlank">
@@ -102,11 +98,11 @@
         </div>
 
         <div id="ContainerButtons4">
-            <button id="punto" style="width: 75px; height: 90px; border-radius: 50px;">.</button>
-            <button id="0" style="width: 75px; height: 90px; border-radius: 15px;">0</button>
-            <button id="borrar" style="width: 75px; height: 90px; border-radius: 50px;">Del</button>
-            <button id="division" style="width: 75px; height: 90px; border-radius: 50px;">÷</button>
-            <button id="multiplicacion" style="width: 75px; height: 90px; border-radius: 50px;">×</button>
+            <button id="punto" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#919597;">.</button>
+            <button id="0" style="font-size: 30px; width: 95px; height: 100px; border-radius: 15px;">0</button>
+            <button id="borrar" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#919597;">Del</button>
+            <button id="division" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#ffac47;">÷</button>
+            <button id="multiplicacion" style="font-size: 30px; width: 95px; height: 100px; border-radius: 50px; background-color:#ffac47;">×</button>
         </div>
     </div>
 
