@@ -32,9 +32,14 @@
         border: 2px solid #FF6347; /*Borde*/
         box-shadow: 0px 0px 10px #FF6347; /*sombra*/
         }
+
+        .div-result {
+            margin-left: 68px; /*Venezuela en la fokin house*/
+        }
+
     </style>
 </head>
-<body style="background-color: #cebb8d;">
+<body style="background-color: #5890d8;">
     <div class="ContainerGeneral">
         <div id="ContainerHead">
             <label id="LabelH"  style="font-weight: bold; font-size: 30px; padding: 35%;">
@@ -48,14 +53,16 @@
 
         <div id="ContainerOperations">
             
-            <label id="label1" style="font-size: 20px;">Operación 1</label>
+            <label id="label1" style="font-size: 20px;">Número 1</label>
             <input id= "op1" style="font-size: 20px;",type="text", size="30" disabled></input>
-            <label id="label2" style="font-size: 20px;">Operación 2</label>
-            <input id= "op2" style="font-size: 20px;",type="text", size="30" disabled></input>
             <label id="labeldinamico" style="font-weight: bold; font-size: 20px; color: rgb(255, 64, 0);"></label>
-            <label id="label3" style="font-size: 20px;">Resultado</label>
-            <input id= "result"style="font-size: 20px;",type="text", size="32" disabled></input>
-            <label id="label4" style="font-weight: bold; font-size: 20px; color: #1F59AA;"> = </label>
+            <label id="label2" style="font-size: 20px;">Número 2</label>
+            <input id= "op2" style="font-size: 20px;",type="text", size="30" disabled></input>
+        </div>
+
+        <div id="ContainerResult" class="div-result">
+            <label id="label4"  style="font-weight: bold; font-size: 20px; color: #1F59AA;"> = </label>
+            <input id= "result"style="font-size: 20px;",type="text", size="30" disabled></input>
         </div>
 
         <div id="ContainerBlank">
